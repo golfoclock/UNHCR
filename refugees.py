@@ -6,7 +6,7 @@ import os
 
 app = Flask(__name__)
 
-MONGOD_URI = os.getenv('MONGOD_URI')
+MONGODB_URI = os.getenv('MONGODB_URI')
 DBS_NAME = os.getenv('MONGO_DB_NAME', 'refugeesUNHCR')
 COLLECTION_NAME = os.getenv('MONGO_COLLECTION_NAME', 'refugeesProject')
 
@@ -22,7 +22,7 @@ def index():
 @app.route("/refugeesProject/refugeesUNHCR")
 def refugees_projects():
     # connection = MongoClient(MONGODB_HOST, MONGODB_PORT)
-    connection = MongoClient(MONGOD_URI)
+    connection = MongoClient(MONGODB_URI)
     collection = connection[DBS_NAME][COLLECTION_NAME]
     projects = collection.find(projection=FIELDS, limit=100000)
 
