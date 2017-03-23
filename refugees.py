@@ -7,8 +7,8 @@ import os
 app = Flask(__name__)
 
 MONGODB_URI = os.getenv('MONGODB_URI')
-DBS_NAME = os.getenv('MONGO_DB_NAME', 'refugeesUNHCR')
-COLLECTION_NAME = os.getenv('MONGO_COLLECTION_NAME', 'refugeesProject')
+DBS_NAME = os.getenv('MONGO_DB_NAME', 'refugeesProject')
+COLLECTION_NAME = os.getenv('MONGO_COLLECTION', 'refugeesUNHCR')
 
 FIELDS = {'Year': True, '_id': False, 'TotalPopulation': True, 'Origin': True, 'Country': True, 'Refugees': True}
 
@@ -37,14 +37,3 @@ if __name__ == "__main__":
     app.run(debug=True)
 
 
-
-
-
-
-    #
-# '''
-# FIELDS = { 'country_of_residence': True,
-#           'refugee': True, 'asylumSeeker': True, 'returnedRefugee': True,
-#           'IDP': True, 'returnedIDP': True, 'statelessPerson': True,
-#           'othersOfConcern': True, 'totalPopulation': True, '_id': False}
-# '''
