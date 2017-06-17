@@ -13,7 +13,7 @@ function makeGraphs(error, projectsJson) {
 
 
 
-    var maxCountry = totalRefugee.top(1)[0].value;
+    // var maxCountry = totalRefugee.top(1)[0].value;
 
 
     //Create a Crossfilter instance (normally only create one)
@@ -50,8 +50,7 @@ function makeGraphs(error, projectsJson) {
     });
 
 
-    originDim.filter("Syria");
-
+    originDim.filter("Syria")
     var syrianRefugees = yearDim.group().reduceSum(function (d) {
         return d['TotalPopulation']
 
@@ -99,8 +98,10 @@ function makeGraphs(error, projectsJson) {
         .elasticY(true)
        .xAxisLabel("Year")
        .yAxis().ticks(4)
-    syriaChart.xAxis().tickFormat(d3.format('d'));
-    syriaChart.ordinalColors(['#679AAB']);
+    syriaChart.xAxis().tickFormat(d3.format('d'))
+    syriaChart.x(d3.scale.linear().domain([2000, 2014])).tickFormat(d3.format("d"));
+
+    // syriaChart.ordinalColors(['#679AAB']);
 
 
     totalPeople

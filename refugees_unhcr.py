@@ -25,7 +25,7 @@ def index():
 def refugees_projects():
     connection = MongoClient(MONGODB_HOST, MONGODB_PORT)
     collection = connection[DBS_NAME][COLLECTION_NAME]
-    projects = collection.find(projection=FIELDS, limit=100000)
+    projects = collection.find(projection=FIELDS, limit=110000)
 
     json_projects = list(projects)
 
