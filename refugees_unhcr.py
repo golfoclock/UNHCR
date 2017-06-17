@@ -11,7 +11,7 @@ MONGODB_HOST = 'localhost'
 MONGODB_PORT = 27017
 
 DBS_NAME = 'unitedNations'
-COLLECTION_NAME = 'refugeeReport'
+COLLECTION_NAME = 'refugeesReport'
 
 
 FIELDS = {'Year': True, '_id': False, 'Country': True, 'Origin': True, 'Refugees': True, 'TotalPopulation': True}
@@ -21,11 +21,11 @@ FIELDS = {'Year': True, '_id': False, 'Country': True, 'Origin': True, 'Refugees
 def index():
     return render_template("index.html")
 
-@app.route("/unitedNations/refugeeReport")
+@app.route("/unitedNations/refugeesReport")
 def refugees_projects():
     connection = MongoClient(MONGODB_HOST, MONGODB_PORT)
     collection = connection[DBS_NAME][COLLECTION_NAME]
-    projects = collection.find(projection=FIELDS, limit=20000)
+    projects = collection.find(projection=FIELDS, limit=100000)
 
     json_projects = list(projects)
 

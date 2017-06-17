@@ -1,6 +1,6 @@
 
 queue()
-   .defer(d3.json, "/unitedNations/refugeeReport")
+   .defer(d3.json, "/unitedNations/refugeesReport")
    .await(makeGraphs);
 
 function makeGraphs(error, projectsJson) {
@@ -8,10 +8,7 @@ function makeGraphs(error, projectsJson) {
     //Clean projectsJson data
     var Asylum_Seekers = projectsJson;
     var dateFormat = d3.time.format("%Y").parse;
-    Asylum_Seekers.forEach(function (d) {
-        d["date_posted"] = dateFormat.parse(d["date_posted"]);
-        d["date_posted"].setDate(1);
-    });
+
 
 
 
