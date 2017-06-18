@@ -96,7 +96,7 @@ function makeGraphs(error, projectsJson) {
 
 
     syriaChart
-        .width(800)
+        .width(1300)
        .height(500)
        .margins({top: 10, right: 75, bottom: 30, left: 75})
        .dimension(yearDim)

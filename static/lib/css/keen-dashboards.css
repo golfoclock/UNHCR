@@ -29,7 +29,7 @@ body.application div[class^="col-"] div[class^="col-"] {
 }
 
 body.application hr {
-  border-color: #d7d7d7;
+  border-color: #e6e9ed;
   margin: 10px 0;
 }
 
@@ -43,11 +43,13 @@ body.application hr {
 .navbar a.navbar-brand {
   color: #e0e5db;
   text-decoration: none;
+
 }
 
+
 .chart-wrapper {
-  background: #e0e5db;
-  border: 1px solid #e2e2e2;
+  background: #e6e9ed;
+  border: 3px solid #e2e2e2;
   border-radius: 3px;
   margin-bottom: 10px;
 }
@@ -72,5 +74,10 @@ body.application hr {
   color: #808080;
   font-size: 12px;
   padding: 8px 10px 5px;
+}
+
+.footer {
+  padding-top: 25px;
+  padding-bottom: 10px;
 }
 
