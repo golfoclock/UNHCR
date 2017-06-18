@@ -59,9 +59,6 @@ function makeGraphs(error, projectsJson) {
 
 // C O L O R S
 
-    var c10 = d3.scale.category10();
-
-
 
 //LIST OF CHARTS - DON'T FORGET TO CHANGE HTML
     var originChart = dc.rowChart("#origin-chart");
@@ -116,8 +113,6 @@ function makeGraphs(error, projectsJson) {
         .group(totalRefugee);
 
 
-
-    dc.filterAll()
     dc.renderAll();
 }
 
