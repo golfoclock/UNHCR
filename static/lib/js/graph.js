@@ -57,6 +57,12 @@ function makeGraphs(error, projectsJson) {
     });
 
 
+// C O L O R S
+
+    var c10 = d3.scale.category10();
+
+
+
 //LIST OF CHARTS - DON'T FORGET TO CHANGE HTML
     var originChart = dc.rowChart("#origin-chart");
     var countryChart = dc.pieChart("#country-chart");
@@ -72,7 +78,8 @@ function makeGraphs(error, projectsJson) {
         .innerRadius(0)
         .transitionDuration(1500)
         .dimension(countryDim)
-        .group(totalRefugee);
+        .group(totalRefugee)
+        d3.scale.category10();
 
 
     originChart
@@ -82,6 +89,7 @@ function makeGraphs(error, projectsJson) {
         .group(totalRefugee)
         .transitionDuration(500)
         .xAxis().ticks(10)
+        d3.scale.category10()(1);
     originChart.ordering(function (d) { return -d.value})
     originChart.rowsCap([10])
     originChart.othersGrouper(false);
@@ -94,14 +102,12 @@ function makeGraphs(error, projectsJson) {
        .dimension(yearDim)
        .group(syrianRefugees)
        .transitionDuration(500)
-        .x(d3.scale.linear().domain([minYear, maxYear]))
         .elasticY(true)
        .xAxisLabel("Year")
-       .yAxis().ticks(4)
-    syriaChart.xAxis().tickFormat(d3.format('d'))
-    syriaChart.x(d3.scale.linear().domain([2000, 2014])).tickFormat(d3.format("d"));
+       .yAxis().ticks(5)
+    syriaChart.xAxis().tickFormat(d3.format('d'));
+    syriaChart.x(d3.scale.linear().domain([minYear, maxYear]));
 
-    // syriaChart.ordinalColors(['#679AAB']);
 
 
     totalPeople
@@ -110,10 +116,10 @@ function makeGraphs(error, projectsJson) {
         .group(totalRefugee);
 
 
+
+    dc.filterAll()
     dc.renderAll();
 }
 
 
 
-
- // .x(d3.scale.linear().domain([2000, 2014])).tickFormat(d3.format("d"));

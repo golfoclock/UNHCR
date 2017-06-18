@@ -21,7 +21,7 @@
    <div class="container-fluid">
        <div class="navbar-header">
            <a class="navbar-brand" href="./">Report on Refugees, Asylum Seekers, and Displaced Persons</a>
-            <div input type="button" class="btn btn-primary btn-md" id="RST2">
+            <div input type="button" class="btn btn-primary btn-md" id="resetButton">
            <a href="javascript:dc.filterAll(); dc.renderAll();">Reset</a>
        </div>
 
@@ -56,6 +56,18 @@
                    </div>
                </div>
 
+    <!-- N U M B E R     D I S P L A Y -->
+         <div class="col-xs-4">
+           <div class="chart-wrapper">
+               <div class="chart-title">
+                   Number Display
+               </div>
+               <div class="chart-stage">
+                   <div id="number-box"></div>
+               </div>
+           </div>
+       </div>
+
 <!-- S Y R I A N      C H A R T  -->
        <div class="col-xs-8">
            <div class="chart-wrapper">
@@ -71,21 +83,11 @@
         </div>
 
 
-<!-- N U M B E R     D I S P L A Y -->
-         <div class="col-xs-4">
-           <div class="chart-wrapper">
-               <div class="chart-title">
-                   Number Display
-               </div>
-               <div class="chart-stage">
-                   <div id="number-box"></div>
-               </div>
-           </div>
-       </div>
-</div>
 
-<hr>
-<p class="small text-muted"> Data from United Nations. Dashboard by Colleen McAuley </p>
+
+
+
+{#<p class="small text-muted"> Data from United Nations. Dashboard by Colleen McAuley </p>#}
 
 <script src="../static/lib/js/bootstrap.min.js"></script>
 <script src="../static/lib/js/crossfilter.js"></script>
@@ -97,6 +99,10 @@
 <script src="../static/lib/js/keen.min.js"></script>
 
 
-</div>
+
+<footer class="footer"> &#169; 2017 Dashboard by Colleen McAuley. Data from United Nations.
+    <a href="http://data.un.org"><img src="static/img/undata.png" alt="United Nations Graphic" style="max-width: 10%; max-height: 10%;"></a>
+
+</footer>
 </body>
 </html>
