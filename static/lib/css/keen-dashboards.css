@@ -4,14 +4,14 @@
  */
 
 #resetButton {
-  background: #bbdefb;
-  text-transform: capitalize;
-  color: #3d4a57;
+  background: #94A4B3;
+  color: #FFFFFF;
+  border: 7px solid #DADFE1;
   margin-top: 7px;
 }
 
 body.application {
-  background: #95a5b4;
+  background: #6C7A89;
   padding: 60px 20px 0;
 }
 body.application > .container-fluid {
@@ -36,28 +36,28 @@ body.application hr {
 
 
 .navbar-inverse {
-  background-color: #3d4a57;
+  background-color: #94A4B3;
   border-color: #333;
 }
 .navbar-inverse .navbar-nav > li > a,
 .navbar a.navbar-brand {
-  color: #e0e5db;
+  color: #FFFFFF;
   text-decoration: none;
 
 }
 
 
 .chart-wrapper {
-  background: #e6e9ed;
-  border: 3px solid #e2e2e2;
+  background: #F2F1EF;
+  border: 7px solid #DADFE1;
   border-radius: 3px;
   margin-bottom: 10px;
 }
 .chart-wrapper .chart-title {
-  border-bottom: 1px solid #d7d7d7;
+  border-bottom: 1px solid #F2F1EF;
   color: #666;
-  font-size: 14px;
-  font-weight: 200;
+  font-size: 18px;
+  font-weight: 300;
   padding: 7px 10px 4px;
 }
 
@@ -71,7 +71,7 @@ body.application hr {
 .chart-wrapper .chart-notes {
   background: #fbfbfb;
   border-top: 1px solid #e2e2e2;
-  color: #808080;
+  color: #424141;
   font-size: 12px;
   padding: 8px 10px 5px;
 }

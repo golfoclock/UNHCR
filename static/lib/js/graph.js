@@ -57,7 +57,7 @@ function makeGraphs(error, projectsJson) {
     });
 
 
-// C O L O R S
+
 
 
 //LIST OF CHARTS - DON'T FORGET TO CHANGE HTML
@@ -103,7 +103,7 @@ function makeGraphs(error, projectsJson) {
        .xAxisLabel("Year")
        .yAxis().ticks(5)
     syriaChart.xAxis().tickFormat(d3.format('d'));
-    syriaChart.x(d3.scale.linear().domain([minYear, maxYear]));
+    syriaChart.x(d3.scale.linear().domain([1955,2015]));
 
 
 
