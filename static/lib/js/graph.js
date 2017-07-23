@@ -80,12 +80,14 @@ function makeGraphs(error, projectsJson) {
 
 
     originChart
-        .width(800)
-        .height(500)
+        .width(750)
+        .height(450)
         .dimension(originDim)
         .group(totalRefugee)
         .transitionDuration(500)
-        .xAxis().ticks(10)
+        // .xAxisLabel("Number of Persons")
+        // .yAxisLabel("Country")
+        .xAxis().ticks(10).tickFormat(d3.format("s"))
         d3.scale.category10()(1);
     originChart.ordering(function (d) { return -d.value})
     originChart.rowsCap([10])
@@ -101,6 +103,7 @@ function makeGraphs(error, projectsJson) {
        .transitionDuration(500)
         .elasticY(true)
        .xAxisLabel("Year")
+        .yAxisLabel("Number of Syrians")
        .yAxis().ticks(5)
     syriaChart.xAxis().tickFormat(d3.format('d'));
     syriaChart.x(d3.scale.linear().domain([1955,2015]));
