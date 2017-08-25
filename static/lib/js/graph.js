@@ -106,7 +106,7 @@ function makeGraphs(error, projectsJson) {
         .yAxisLabel("Number of Syrians")
        .yAxis().ticks(5)
     syriaChart.xAxis().tickFormat(d3.format('d'));
-    syriaChart.x(d3.scale.linear().domain([1955,2015]));
+    syriaChart.x(d3.scale.linear().domain([2005,2015]));
 
 
 
