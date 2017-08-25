@@ -29,7 +29,7 @@ It displays charts associated with the data.
 
 
 ###USAGE
-    syriaChart
+    `syriaChart
        .width(1300)
        .height(500)
        .margins({top: 10, right: 75, bottom: 30, left: 75})
@@ -41,7 +41,7 @@ It displays charts associated with the data.
        .yAxisLabel("Number of Syrians")
        .yAxis().ticks(5)
     syriaChart.xAxis().tickFormat(d3.format('d'));
-    syriaChart.x(d3.scale.linear().domain([1955,2015]));
+    syriaChart.x(d3.scale.linear().domain([1955,2015]));`
    
 This allows the user to see the data in a bar chart, and interpret the
    information appropriately.
