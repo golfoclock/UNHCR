@@ -6,12 +6,14 @@ import os
 
 app = Flask(__name__)
 
+# local hosting
+# MONGODB_HOST = 'localhost'
+# MONGODB_PORT = 27017
 
-MONGODB_HOST = 'localhost'
-MONGODB_PORT = 27017
+MONGODB_URI = os.getenv('MONGODB_URI')
 
-DBS_NAME = 'unitedNations'
-COLLECTION_NAME = 'refugeesReport'
+DBS_NAME = os.getenv('MONGO_DB_NAME', 'unitedNations')
+COLLECTION_NAME = os.getenv('MONGO_COLLECTION_NAME','refugeesReport')
 
 
 FIELDS = {'Year': True, '_id': False, 'Country': True, 'Origin': True, 'Refugees': True, 'TotalPopulation': True}

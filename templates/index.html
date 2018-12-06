@@ -1,96 +1,91 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Refugees Report</title>
-     <link rel="stylesheet" href="{{ url_for ('static',
-         filename='lib/css/introjs.css')}}">
-   <link rel="stylesheet" href="{{ url_for ('static',
-         filename='lib/css/bootstrap.min.css')}}">
-   <link rel="stylesheet" href="{{ url_for ('static',
-         filename='lib/css/keen-dashboards.css')}}">
-   <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/dc.css')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refugees Report</title>
+    <link rel="stylesheet" href="{{ url_for ('static',
+         filename='lib/css/introjs.css') }}">
+    <link rel="stylesheet" href="{{ url_for ('static',
+         filename='lib/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for ('static',
+         filename='lib/css/keen-dashboards.css') }}">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/dc.css') }}">
 
     <script src="../static/lib/js/jquery.min.js"></script>
     <script src="../static/lib/js/queue.js"></script>
 
- </head>
+</head>
 <body class="application">
 
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-   <div class="container-fluid">
-       <div class="navbar-header">
-           <a class="navbar-brand" href="./">Report on Refugees, Asylum Seekers, and Displaced Persons</a>
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="./">Report on Refugees, Asylum Seekers, and Displaced Persons</a>
 
-       </div>
-   </div>
+        </div>
+    </div>
 </div>
 
 
-<div  id="outer" class="container-fluid">
+<div id="outer" class="container-fluid">
 
-<!-- R E F U G E E S    B Y    O R I G I N  C H A R T  -->
-       <div class="col-xs-8">
-           <div class="chart-wrapper">
-               <div class="chart-title">
-                   Origin Country Chart
-               </div>
-               <div class="chart-stage">
-                   <div id="origin-chart"></div>
-               </div>
-           </div>
-       </div>
+    <!-- R E F U G E E S    B Y    O R I G I N  C H A R T  -->
+    <div class="col-xs-8">
+        <div class="chart-wrapper">
+            <div class="chart-title">
+                Origin Country Chart
+            </div>
+            <div class="chart-stage">
+                <div id="origin-chart"></div>
+            </div>
+        </div>
+    </div>
 
-<!-- C O U N T R I E S      R E C I E V I N G      R E F U G E E S    C H A R T  -->
-          <div class="col-xs-4">
-                   <div class="chart-wrapper">
-                       <div class="chart-title">
-                           Received Refugees by Country
-                       </div>
-                       <div class="chart-stage">
-                           <div id="country-chart"></div>
-                       </div>
-                   </div>
-               </div>
-
+    <!-- C O U N T R I E S      R E C I E V I N G      R E F U G E E S    C H A R T  -->
+    <div class="col-xs-4">
+        <div class="chart-wrapper">
+            <div class="chart-title">
+                Received Refugees by Country
+            </div>
+            <div class="chart-stage">
+                <div id="country-chart"></div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- N U M B E R     D I S P L A Y -->
-         <div class="col-xs-4">
-           <div class="chart-wrapper">
-               <div class="chart-title">
-                   Number Display
-               </div>
-               <div class="chart-stage">
-                   <div id="number-box"></div>
-               </div>
-           </div>
-       </div>
+    <div class="col-xs-4">
+        <div class="chart-wrapper">
+            <div class="chart-title">
+                Number Display
+            </div>
+            <div class="chart-stage">
+                <div id="number-box"></div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- R E S E T     B U T T O N  -->
     <div class="col-xs-4">
-     <div input type="button" class="btn btn-primary btn-lg btn-block" id="resetButton">
-           <a href="javascript:dc.filterAll(); dc.renderAll();">Reset</a>
-       </div>
-    </div>
-<!-- S Y R I A N      C H A R T  -->
-       <div class="col-xs-12">
-           <div class="chart-wrapper">
-               <div class="chart-title">
-                   Refugees by Year
-               </div>
-               <div class="chart-stage">
-                   <div id="refugee-chart"></div>
-               </div>
-           </div>
-       </div>
-
+        <div input type="button" class="btn btn-primary btn-lg btn-block" id="resetButton">
+            <a href="javascript:dc.filterAll(); dc.renderAll();">Reset</a>
         </div>
+    </div>
+    <!-- S Y R I A N      C H A R T  -->
+    <div class="col-xs-12">
+        <div class="chart-wrapper">
+            <div class="chart-title">
+                Refugees by Year
+            </div>
+            <div class="chart-stage">
+                <div id="refugee-chart"></div>
+            </div>
+        </div>
+    </div>
 
-
-
-
+</div>
 
 
 {#<p class="small text-muted"> Data from United Nations. Dashboard by Colleen McAuley </p>#}
@@ -105,10 +100,11 @@
 <script src="../static/lib/js/keen.min.js"></script>
 
 
-
-<footer class="footer"> &#169; 2017 Dashboard by Colleen McAuley. Data from the United Nations.
-    <a href="http://data.un.org"><img src="static/img/undata.png" alt="United Nations Logo" style="max-width: 10%; max-height: 10%;"></a>
-    <a href="http://www.unhcr.org/"><img src="static/img/unhcr.png" alt="UNHCR Logo" style="max-width: 13%; max-height: 13%;"></a>
+<footer class="footer"> &#169; 2018 Dashboard by Colleen McAuley. Data from the United Nations.
+    <a href="http://data.un.org"><img src="static/img/undata.png" alt="United Nations Logo"
+                                      style="max-width: 10%; max-height: 10%;"></a>
+    <a href="http://www.unhcr.org/"><img src="static/img/unhcr.png" alt="UNHCR Logo"
+                                         style="max-width: 13%; max-height: 13%;"></a>
 
 </footer>
 </body>

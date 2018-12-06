@@ -99,8 +99,7 @@ function makeGraphs(error, projectsJson) {
         .xAxisLabel("Year")
         .yAxisLabel("Number of Refugees")
         .yAxis().ticks(10).tickFormat(d3.format("s"))
-    // .yAxis().ticks(5)
-    refugeeBarChart.xAxis().tickFormat(d3.format('d'))
+    refugeeBarChart.xAxis().ticks(10).tickFormat(d3.format('d'))
     refugeeBarChart.x(d3.scale.linear().domain([2005, 2015]));
 
 
