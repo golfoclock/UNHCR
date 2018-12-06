@@ -1,17 +1,17 @@
-###DASHBOARD for REFUGEES & DISPLACED PERSONS
+#DASHBOARD for REFUGEES & DISPLACED PERSONS
 
-###INTRO
+##INTRO
 This website comprises key data from the United Nations High Commissioner for Refugees.
 It displays charts associated with the data.
 
-###FEATURES
+##FEATURES
 - Bar Chart
 - Pie Chart 
 - Number Display
 - Row Chart
 
 
-###TECH/FRAMEWORKS/LIBRARIES USED
+##TECH/FRAMEWORKS/LIBRARIES USED
 — D3.js
 - DC.js
 - Crossfilter
@@ -28,7 +28,7 @@ It displays charts associated with the data.
 - Bootstrap
 
 
-###USAGE
+##USAGE
 
     `syriaChart
        .width(1300)
@@ -48,7 +48,7 @@ This allows the user to see the data in a bar chart, and interpret the
    information appropriately.
    
 
-###TESTS
+##TESTS
 
 Dashboard was tested in the following browsers:
 - Safari 10.1.1
@@ -76,13 +76,13 @@ Dashboard was tested for responsiveness on:
 - 1920 x 1080
 
 
-###GETTING HELP
+##GETTING HELP
 If you encounter a glitch, or would like to see an improvement, please feel free to reach out: cmmc [ at ] protonmail [dot] ch 
 
-###LICENSE
+##LICENSE
 MIT &#169 Colleen McAuley
 
-###ACKNOWLEDGMENTS and SPECIAL THANKS
+##ACKNOWLEDGMENTS and SPECIAL THANKS
 - Code Institute Class
 - Brian
 - Richard

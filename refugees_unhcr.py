@@ -30,8 +30,9 @@ def refugees_projects():
     collection = connection[DBS_NAME][COLLECTION_NAME]
     projects = collection.find(projection=FIELDS, limit=130000)
 
-    json_projects = list(projects)
-
+    json_projects = []
+    for project in projects:
+        json_projects.append(project)
     json_projects = json.dumps(json_projects)
     connection.close()
     return json_projects
