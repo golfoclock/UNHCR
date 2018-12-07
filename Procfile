@@ -1,1 +1,1 @@
-web: gunicorn unhcrgit :app
+web: gunicorn unhcr:app
