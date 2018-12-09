@@ -26,7 +26,7 @@ function makeGraphs(error, projectsJson) {
     });
 
     var countryDim = ndx.dimension(function (d) {
-        return d["Country"]
+        return d["Country"];
 
     });
 
