@@ -28,7 +28,7 @@ def refugees_projects():
     # connection = MongoClient(MONGODB_HOST, MONGODB_PORT)
     connection = MongoClient(MONGODB_URI)
     collection = connection[DBS_NAME][COLLECTION_NAME]
-    projects = collection.find(projection=FIELDS, limit=130000)
+    projects = collection.find(projection=FIELDS, limit=160000)
 
     json_projects = []
     for project in projects:

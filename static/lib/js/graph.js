@@ -18,7 +18,7 @@ function makeGraphs(error, projectsJson) {
 
     //Define Dimensions ( usually on x-axis)
     var yearDim = ndx.dimension(function (d) {
-        return d["Year"];
+        return d['Year'];
     });
 
     var originDim = ndx.dimension(function (d) {
@@ -48,8 +48,8 @@ function makeGraphs(error, projectsJson) {
 
     });
 
-    var minYear = yearDim.bottom(1)[0]["Year"];
-    var maxYear = yearDim.top(1)[0]["Year"];
+    var minYear = yearDim.bottom(1)[0]['Year'];
+    var maxYear = yearDim.top(1)[0]['Year'];
 
 //LIST OF CHARTS - DON'T FORGET TO CHANGE HTML
     var originChart = dc.rowChart("#origin-chart");
