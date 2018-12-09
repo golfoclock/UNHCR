@@ -2,8 +2,6 @@ from flask import Flask
 from flask import render_template
 from pymongo import MongoClient
 import json
-import bson import json_util
-from bson.json_util import dumps
 import os
 
 app = Flask(__name__)
@@ -30,7 +28,7 @@ def refugees_projects():
     # connection = MongoClient(MONGODB_HOST, MONGODB_PORT)
     connection = MongoClient(MONGODB_URI)
     collection = connection[DBS_NAME][COLLECTION_NAME]
-    projects = collection.find(projection=FIELDS, limit=160000)
+    projects = collection.find(projection=FIELDS, limit=102000)
 
     json_projects = []
     for project in projects:
