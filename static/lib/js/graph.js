@@ -31,9 +31,6 @@ function makeGraphs(error, projectsJson) {
     });
 
 
-    var minYear = yearDim.bottom(1)[0]["Year"];
-    var maxYear = yearDim.top(1)[0]["Year"];
-
 
 //Calculating Metrics (usually y-axis)
 
@@ -51,6 +48,8 @@ function makeGraphs(error, projectsJson) {
 
     });
 
+    var minYear = yearDim.bottom(1)[0]["Year"];
+    var maxYear = yearDim.top(1)[0]["Year"];
 
 //LIST OF CHARTS - DON'T FORGET TO CHANGE HTML
     var originChart = dc.rowChart("#origin-chart");
