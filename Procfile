@@ -1,1 +1,1 @@
-web: gunicorn unhcr:app
+web: gunicorn refugees_unhcr:app
