@@ -28,11 +28,11 @@ function makeGraphs(error, projectsJson) {
     var countryDim = ndx.dimension(function (d) {
         return d["Country"]
 
-    })
+    });
 
 
-    // var minYear = yearDim.bottom(1)[0]["Year"];
-    // var maxYear = yearDim.top(1)[0]["Year"];
+    var minYear = yearDim.bottom(1)[0]["Year"];
+    var maxYear = yearDim.top(1)[0]["Year"];
 
 
 //Calculating Metrics (usually y-axis)
