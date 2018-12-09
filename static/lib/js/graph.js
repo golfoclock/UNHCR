@@ -77,15 +77,14 @@ function makeGraphs(error, projectsJson) {
         .dimension(originDim)
         .group(totalRefugee)
         .transitionDuration(500)
-        // .xAxisLabel("Number of Persons")
-        // .yAxisLabel("Country")
         .xAxis().ticks(10).tickFormat(d3.format("s"))
+        originChart.ordering(function (d) {
+            return -d.value
+        })
+        .rowsCap([10])
+        .othersGrouper(false);
     d3.scale.category10()(1)
-    originChart.ordering(function (d) {
-        return -d.value
-    })
-    originChart.rowsCap([10])
-    originChart.othersGrouper(false);
+
 
 
     refugeeBarChart
@@ -99,8 +98,8 @@ function makeGraphs(error, projectsJson) {
         .xAxisLabel("Year")
         .yAxisLabel("Number of Refugees")
         .yAxis().ticks(10).tickFormat(d3.format("s"))
-    refugeeBarChart.xAxis().ticks(10).tickFormat(d3.format('d'))
-    refugeeBarChart.x(d3.scale.linear().domain([2005, 2015]));
+        .xAxis().ticks(10).tickFormat(d3.format('d'))
+        .x(d3.scale.linear().domain([2005, 2015]));
 
 
     totalPeople
