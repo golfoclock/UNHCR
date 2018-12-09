@@ -22,11 +22,11 @@ function makeGraphs(error, projectsJson) {
     });
 
     var originDim = ndx.dimension(function (d) {
-        return d["Origin"];
+        return d['Origin'];
     });
 
     var countryDim = ndx.dimension(function (d) {
-        return d["Country"];
+        return d['Country'];
 
     });
 
@@ -39,7 +39,7 @@ function makeGraphs(error, projectsJson) {
 
 
     var totalRefugee = originDim.group().reduceSum(function (d) {
-        return d["Refugees"];
+        return d['Refugees'];
     });
 
 
@@ -48,8 +48,6 @@ function makeGraphs(error, projectsJson) {
 
     });
 
-    // var minYear = yearDim.bottom(1)[0]['Year'];
-    // var maxYear = yearDim.top(1)[0]['Year'];
 
 //LIST OF CHARTS - DON'T FORGET TO CHANGE HTML
     var originChart = dc.rowChart("#origin-chart");
@@ -79,7 +77,7 @@ function makeGraphs(error, projectsJson) {
         // .xAxisLabel("Number of Persons")
         // .yAxisLabel("Country")
         .xAxis().ticks(10).tickFormat(d3.format("s"))
-    d3.scale.category10()(1);
+    d3.scale.category10()(1)
     originChart.ordering(function (d) {
         return -d.value
     })
