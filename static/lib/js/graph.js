@@ -48,9 +48,6 @@ function makeGraphs(error, projectsJson) {
 
     });
 
-    var minYear = yearDim.bottom(1)[0]['Year'];
-    var maxYear = yearDim.top(1)[0]['Year'];
-
 
 //LIST OF CHARTS - DON'T FORGET TO CHANGE HTML
     var originChart = dc.rowChart("#origin-chart");
@@ -78,11 +75,11 @@ function makeGraphs(error, projectsJson) {
         .group(totalRefugee)
         .transitionDuration(500)
         .xAxis().ticks(10).tickFormat(d3.format("s"))
-        originChart.ordering(function (d) {
-            return -d.value
+    originChart.ordering(function (d) {
+        return -d.value
         })
-        .rowsCap([10])
-        .othersGrouper(false);
+    originChart.rowsCap([10])
+    originChart.othersGrouper(false);
     d3.scale.category10()(1)
 
 
@@ -98,8 +95,8 @@ function makeGraphs(error, projectsJson) {
         .xAxisLabel("Year")
         .yAxisLabel("Number of Refugees")
         .yAxis().ticks(10).tickFormat(d3.format("s"))
-        .xAxis().ticks(10).tickFormat(d3.format('d'))
-        .x(d3.scale.linear().domain([2005, 2015]));
+    refugeeBarChart.xAxis().ticks(10).tickFormat(d3.format('d'))
+    refugeeBarChart.x(d3.scale.linear().domain([2005, 2015]));
 
 
     totalPeople
