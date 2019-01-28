@@ -1,5 +1,5 @@
 queue()
-    .defer(d3.json, "/unitedNations/refugeesReport")
+    .defer(d3.json, "/unitedNations/projects")
     .await(makeGraphs);
 
 function makeGraphs(error, projectsJson) {
