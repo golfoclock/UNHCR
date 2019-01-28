@@ -76,11 +76,11 @@ function makeGraphs(error, projectsJson) {
         .transitionDuration(500)
         .xAxis().ticks(10).tickFormat(d3.format("s"))
     originChart.ordering(function (d) {
-        return -d.value
+            return -d.value
         })
     originChart.rowsCap([10])
-    originChart.othersGrouper(false);
-    d3.scale.category10()(1)
+    originChart.othersGrouper(false)
+    d3.scale.category10()(1);
 
 
 
@@ -100,11 +100,12 @@ function makeGraphs(error, projectsJson) {
 
 
     totalPeople
-        .formatNumber(d3.format(","))
+        .formatNumber(d3.format("d"))
         .valueAccessor(function (d) {
-            return d.value
+            return d
         })
-        .group(totalRefugee);
+        .group(totalRefugee)
+        .formatNumber(d3.format(".3s"));
 
 
     dc.renderAll();
