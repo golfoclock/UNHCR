@@ -100,7 +100,7 @@ function makeGraphs(error, projectsJson) {
 
 
     totalPeople
-        .formatNumber(d3.format("d"))
+        .formatNumber(d3.format("d"))git
         .valueAccessor(function (d) {
             return d
         })
