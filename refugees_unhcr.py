@@ -13,7 +13,7 @@ app = Flask(__name__)
 MONGODB_URI = os.getenv('MONGODB_URI')
 
 DBS_NAME = os.getenv('MONGO_DB_NAME', 'unitedNations')
-COLLECTION_NAME = os.getenv('MONGO_COLLECTION_NAME','projects')
+COLLECTION_NAME = os.getenv('MONGO_COLLECTION_NAME','refugeesReport')
 
 
 FIELDS = {'Year': True, '_id': False, 'Country': True, 'Origin': True, 'Refugees': True, 'TotalPopulation': True}
@@ -23,7 +23,7 @@ FIELDS = {'Year': True, '_id': False, 'Country': True, 'Origin': True, 'Refugees
 def index():
     return render_template("index.html")
 
-@app.route("/unitedNations/projects")
+@app.route("/unitedNations/refugeesReport")
 def refugees_projects():
     # connection = MongoClient(MONGODB_HOST, MONGODB_PORT)
     connection = MongoClient(MONGODB_URI)
@@ -38,5 +38,5 @@ def refugees_projects():
     return json_projects
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
 
